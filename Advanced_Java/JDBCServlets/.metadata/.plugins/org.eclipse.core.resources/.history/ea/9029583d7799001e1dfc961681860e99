@@ -1,0 +1,46 @@
+package com.gqt.hibernatemanager;
+import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.gqt.entity.Customer;
+
+
+public class HibernateManager {
+
+	// TODO Auto-generated method stub
+	SessionFactory factory=new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Customer.class).buildSessionFactory();
+	Session session=(Session) factory.getCurrentSession();
+	public int register(String name, String password) {
+		session.beginTransaction();
+		Customer tempCustomer=new Customer(name,password);
+		session.save(tempCustomer);
+		session.getTransaction().commit();
+		return 0;
+	}
+	public boolean login(String name, String password) {
+		session.beginTransaction();
+		List<Customer> customers = session.createQuery("FROM Customer").list();
+		 for (Customer customer : customers) {
+		        if (customer.getName().equals(name) && customer.getPassword().equals(password)) {
+		            session.getTransaction().commit();
+		            return true; // Match found, login successful
+		        }
+		    }
+		session.getTransaction().commit();
+		return false; 
+	}
+}      
+
+
+
+
+
+

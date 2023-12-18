@@ -1,0 +1,24 @@
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class Insert {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 SessionFactory factory=new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(student1.class).addAnnotatedClass(studentDetail.class).buildSessionFactory();
+	     Session session=factory.getCurrentSession();
+	     
+	     session.beginTransaction();
+	     
+	     student1 tempStudent = new student1("Renuka","V","vrenuka@gmail.com"); 
+	     studentDetail tempstudentDetail = new studentDetail("Civil", "singing");
+	     
+	     tempStudent.setStudentDetail(tempstudentDetail);
+	   
+	     session.save(tempStudent);
+	     session.getTransaction().commit();
+	     
+	}
+
+}

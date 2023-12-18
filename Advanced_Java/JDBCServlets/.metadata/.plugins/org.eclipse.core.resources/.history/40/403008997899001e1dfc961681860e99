@@ -1,0 +1,38 @@
+package com.gqt.controller;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.gqt.hibernatemanager.HibernateManager;
+
+@Controller
+public class CustomerController {
+	@RequestMapping("/")
+	public String menuPage() {
+		return "main-menu";
+	}
+	@RequestMapping("/newCustomer")
+	public String newCustomer() {
+		return "newCustomer-form";
+	}
+	@RequestMapping("/registerCustomer")
+	public String registerCustomer(@RequestParam("name") String name,@RequestParam("password") String password ) {//@RequestParam get the value in the name
+		HibernateManager hm = new HibernateManager();
+		hm.register(name, password);
+		return "registrationSuccess";
+	}
+
+	@RequestMapping("/existingCustomer")
+	public String loginCustomer(@RequestParam("name") String name,@RequestParam("password") String password ) {//@RequestParam get the value in the name
+		HibernateManager hm = new HibernateManager();
+		int status=hm.login(name, password);
+		if(status==1) {
+			return "loginSuccess";
+		}
+		else {
+			return "loginFailure";
+		}
+		
+	}
+	
+}

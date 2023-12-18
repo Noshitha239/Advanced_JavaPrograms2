@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style="background-image:rgb(255,0,0,0.5),url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwall.alphacoders.com%2Ftag%2Fblack-car-wallpapers&psig=AOvVaw1d56NjgChZlBUIQ1Hr83lH&ust=1700148927100000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJiGy-WqxoIDFQAAAAAdAAAAABAE')">
+<h1>
+Are you Admin or Customer?
+</h1>
+<a href="/car_service_system/adminLogin.html" ><button style="margin-left:5%;width:80px;height:40px">Admin</button></a>
+<a href="/car_service_system/customerLogin.html"><button style="margin-left:2%;width:80px;height:40px">Customer</button></a>
+</body>
+</html>

@@ -1,0 +1,5 @@
+package com.gqt.spring;
+
+public interface Address {
+     String getPractise();
+}

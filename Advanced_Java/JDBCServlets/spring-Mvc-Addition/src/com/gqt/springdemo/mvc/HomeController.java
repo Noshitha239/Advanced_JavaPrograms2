@@ -1,0 +1,26 @@
+package com.gqt.springdemo.mvc;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HomeController {
+	@RequestMapping("/")
+	public String menuPage() {
+		return "main-menu";
+	}
+	@RequestMapping("processform")
+	public String showPage(HttpServletRequest request,Model model) {
+	    String firstNumber = request.getParameter("firstNumber");
+	    String secondNumber = request.getParameter("secondNumber");
+	    int a=Integer.parseInt(firstNumber);
+	    int b=Integer.parseInt(secondNumber);
+	    int result=a+b;
+	    model.addAttribute("sum", result);
+		return "display-menu";
+	}
+
+}

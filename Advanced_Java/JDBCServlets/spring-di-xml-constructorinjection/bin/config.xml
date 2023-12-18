@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<bean name="java" class="com.gqt.spring.JavaTrainer">
+		<constructor-arg name="name" value="Noshitha"></constructor-arg>
+		<constructor-arg name="exp" value="1"></constructor-arg>
+
+	</bean>
+	
+
+	<bean name="sql" class="com.gqt.spring.SqlTrainer">
+		<constructor-arg name="name" value="Navya"></constructor-arg>
+		<constructor-arg name="exp" value="6"></constructor-arg>
+
+	</bean>
+
+	<bean name="web" class="com.gqt.spring.WebTrainer">
+		<constructor-arg name="name" value="Renuka"></constructor-arg>
+		<constructor-arg name="exp" value="8"></constructor-arg>
+
+	</bean>
+
+</beans>

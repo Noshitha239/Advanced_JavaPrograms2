@@ -1,0 +1,5 @@
+package com.gqt.springdemo.mvc;
+
+public class Student {
+
+}

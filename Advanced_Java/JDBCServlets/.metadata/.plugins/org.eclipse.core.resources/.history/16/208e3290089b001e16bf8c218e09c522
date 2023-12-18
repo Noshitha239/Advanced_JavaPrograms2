@@ -1,0 +1,41 @@
+package com.gqt.spring;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+public class MainApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ApplicationContext cpx=new ClassPathXmlApplicationContext("config.xml");
+		JdbcTemplate bean=(JdbcTemplate) cpx.getBean("jdbcTemplate");
+		//       String s="insert into employee values(?,?,?)";
+		//       int res=bean.update(s,1,"Navya","vnr");
+		//       System.out.println(res);
+
+		String s1="select * from Employee";
+		List<Map<String, Object>> rows = bean.queryForList(s1);
+
+		for(Map<String, Object>x:rows) {
+			int id= (int) x.get("id");
+			String firstName = (String) x.get("first_name");
+			String lastName = (String) x.get("last_name");
+			System.out.println(id+" "+firstName+" "+lastName);
+		}
+		//updating the data 
+		String s="update Employee first_name=? where id=?";
+		int res=bean.update(s, "1", "NNR");
+        System.out.println(res);
+        
+        public void update(Integer id, String firstName){
+            String SQL = "update Student set age = ? where id = ?";
+            jdbcTemplateObject.update(SQL, age, id);
+            System.out.println("Updated Record with ID = " + id );
+           
+         }
+	}
+}

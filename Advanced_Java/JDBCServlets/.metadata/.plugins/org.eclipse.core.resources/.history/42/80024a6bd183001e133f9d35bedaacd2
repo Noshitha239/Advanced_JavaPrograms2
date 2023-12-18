@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style="Background-image:linear-gradient(90deg,rgba(255,0,0,0.4),rgba(0, 94, 255, 0.9),gray),url('https://media.graphassets.com/FZ0K3G6RciD6Fugm5gqQ');background-size:cover;">
+<h1>
+Are you Admin or Customer?
+</h1>
+<a href="/car_service_system/adminLogin.html" ><button style="margin-left:5%;width:80px;height:40px">Admin</button></a>
+<a href="/car_service_system/customerLogin.html"><button style="margin-left:2%;width:80px;height:40px">Customer</button></a>
+</body>
+</html>

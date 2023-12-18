@@ -1,0 +1,25 @@
+package com.gqt.springdemo.mvc;
+
+import javax.jms.Session;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class HibernateManager {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        SessionFactory factory=new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Customer.class).buildSessionFactory();
+       
+        
+        Session session=(Session) factory.getCurrentSession();
+        Customer tempCustomer=new Customer("Renuka","Vnr");
+      
+        
+//       session.beginTransaction();
+//              
+//       session.save(tempCustomer);
+//     
+//       session.getTransaction().commit();
+      
+	}
+}

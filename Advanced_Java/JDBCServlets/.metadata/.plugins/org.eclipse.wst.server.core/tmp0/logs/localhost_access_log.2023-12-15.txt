@@ -1,0 +1,12 @@
+127.0.0.1 - - [15/Dec/2023:11:13:54 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [15/Dec/2023:11:13:57 +0530] "GET /spring-demo/ HTTP/1.1" 200 280
+0:0:0:0:0:0:0:1 - - [15/Dec/2023:11:13:57 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [15/Dec/2023:11:13:59 +0530] "GET /spring-demo/std/menuForm HTTP/1.1" 200 876
+0:0:0:0:0:0:0:1 - - [15/Dec/2023:11:14:05 +0530] "POST /spring-demo/std/processform HTTP/1.1" 200 281
+127.0.0.1 - - [15/Dec/2023:11:18:25 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [15/Dec/2023:11:18:27 +0530] "GET /spring-demo/ HTTP/1.1" 200 270
+0:0:0:0:0:0:0:1 - - [15/Dec/2023:11:18:28 +0530] "GET /spring-demo/ HTTP/1.1" 200 270
+0:0:0:0:0:0:0:1 - - [15/Dec/2023:11:18:47 +0530] "GET /spring-demo/existingCustomer HTTP/1.1" 200 343
+0:0:0:0:0:0:0:1 - - [15/Dec/2023:11:18:58 +0530] "GET /spring-demo/loginCustomer?name=Navya&password=123%2C1234%2C123 HTTP/1.1" 200 236
+0:0:0:0:0:0:0:1 - - [15/Dec/2023:11:19:01 +0530] "GET /spring-demo/updatePassword HTTP/1.1" 200 560
+0:0:0:0:0:0:0:1 - - [15/Dec/2023:11:19:17 +0530] "GET /spring-demo/updateCustomer1?id=5&name=Navya&oldpassword=123%2C1234%2C123&newPassword=123 HTTP/1.1" 200 195

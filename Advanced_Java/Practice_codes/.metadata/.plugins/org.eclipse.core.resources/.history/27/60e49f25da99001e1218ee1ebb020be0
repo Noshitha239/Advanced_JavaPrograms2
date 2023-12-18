@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Fibanacci {
+
+	public static int main(String[] args) {
+		// TODO Auto-generated method stub
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=0;i<n;i++) {
+        	System.out.print(fibonacci(i) + " ");	
+        }
+       
+	}
+	private static String fibonacci(int n) {
+		// TODO Auto-generated method stub
+		if (n <= 1) {
+			return n;
+		} else {
+			return fibonacci(n - 1) + fibonacci(n - 2);
+		}
+
+		
+	}
+
+}

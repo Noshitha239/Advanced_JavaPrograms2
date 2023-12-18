@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Fri Dec 15 11:18:20 IST 2023
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\91817\\Downloads\\spring-5.3.8-dist\\spring-framework-5.3.8\\libs\\spring-web-5.3.8-sources.jar=WEB-INF/lib/spring-web-5.3.8-sources.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\91817\\Downloads\\spring-5.3.8-dist\\spring-framework-5.3.8\\libs\\spring-web-5.3.8.jar=WEB-INF/lib/spring-web-5.3.8.jar
